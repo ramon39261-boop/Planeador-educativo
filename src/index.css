@@ -1,0 +1,114 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600;700&family=Outfit:wght@400;500;600&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-heading: "Outfit", sans-serif;
+}
+
+:root {
+  --sep-green: #13322B;
+  --sep-gold: #D4C19C;
+  --sep-maroon: #691C32;
+  --sep-bg: #F5F5F0;
+}
+
+body {
+  background-color: var(--sep-bg);
+  color: #1a1a1a;
+  font-family: var(--font-sans);
+}
+
+.sep-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sep-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s;
+  background: #f9fafb;
+}
+
+.sep-input:focus {
+  outline: none;
+  border-color: var(--sep-green);
+  box-shadow: 0 0 0 2px rgba(19, 50, 43, 0.1);
+  background: white;
+}
+
+.sep-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--sep-green);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+}
+
+.prose-official {
+  font-family: var(--font-serif);
+  line-height: 1.7;
+  color: #334155;
+}
+
+.prose-official h1, .prose-official h2, .prose-official h3 {
+  font-family: var(--font-display);
+  color: var(--sep-green);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.prose-official p {
+  margin-bottom: 1rem;
+}
+
+.prose-official ul, .prose-official ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose-official li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-official table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.prose-official th, .prose-official td {
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.prose-official th {
+  background-color: #f8fafc;
+  font-weight: 600;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .sep-card {
+    box-shadow: none;
+    border: none;
+  }
+}
